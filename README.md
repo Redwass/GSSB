@@ -24,7 +24,7 @@ return sum(l.LO_REVENUE);
 
 ##### Q1.2
 
-```sql
+```cypher
 optional match (d:date{D_YEARMONTHNUM:199401})<-[r:order_date]-(l:lineorder)
 where 4<= l.LO_DISCOUNT <=6
 and 26<= l.LO_QUANTITY <= 35
@@ -33,7 +33,7 @@ return sum(l.LO_REVENUE);
 
 ##### Q1.3
 
-```sql
+```cypher
 optional match (d:date{D_YEAR:1994, D_WEEKNUMINYEAR:6})<-[r:order_date]-(l:lineorder)
 where 5<= l.LO_DISCOUNT <=7
 and 26<= l.LO_QUANTITY <= 35
@@ -42,7 +42,7 @@ return sum(l.LO_REVENUE);
 
 ##### Q2.1
 
-```sql
+```cypher
 optional match (p:part)<-[:order_part]-(l:lineorder)-[:order_supplier]->(s:supplier),(d:date)<-[:order_date]-(l)
 where p.P_CATEGORY= "MFGR#12"
 and s.S_REGION = "AMERICA" 
@@ -52,7 +52,7 @@ ORDER BY d.D_YEAR, p.P_BRAND;
 
 ##### Q2.2
 
-```sql
+```cypher
 optional match (p:part)<-[:order_part]-(l:lineorder)-[:order_supplier]->(s:supplier),(d:date)<-[:order_date]-(l)
 where (p.P_BRAND >= "MFGR#2221" and p.P_BRAND <= "MFGR#2228")
 and s.S_REGION = "ASIA" 
@@ -62,7 +62,7 @@ ORDER BY d.D_YEAR, p.P_BRAND;
 
 ##### Q2.3
 
-```sql
+```cypher
 optional match (p:part)<-[:order_part]-(l:lineorder)-[:order_supplier]->(s:supplier),(d:date)<-[:order_date]-(l)
 where p.P_BRAND1 = "MFGR#2239" 
 and s.S_REGION = "EUROPE" 
@@ -72,7 +72,7 @@ ORDER BY d.D_YEAR, p.P_BRAND;
 
 ##### Q3.1
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where 1992<= d.D_YEAR <=1997
 and c.C_REGION starts with "ASIA"
@@ -83,7 +83,7 @@ ORDER BY d.D_YEAR ASC, revenu DESC;
 
 ##### Q3.2
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where 1992<= d.D_YEAR <=1997
 and c.C_NATION starts with "UNITED STATES" 
@@ -94,7 +94,7 @@ ORDER BY d.D_YEAR ASC, revenu DESC;
 
 ##### Q3.3
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where 1992<= d.D_YEAR <=1997
 and (c.C_CITY = "UNITED KI1" or c.C_CITY = "UNITED KI5") 
@@ -105,7 +105,7 @@ ORDER BY d.D_YEAR ASC, revenu DESC;
 
 ##### Q3.4
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where (c.C_CITY = "UNITED KI1" or c.C_CITY = "UNITED KI5") 
 and (s.S_CITY = "UNITED KI1" or s.S_CITY = "UNITED KI5") 
@@ -116,7 +116,7 @@ ORDER BY d.D_YEAR ASC, revenu DESC;
 
 ##### Q4.1
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_part]->(p:part),(d:date)<-[:order_date]-(l)-[:order_supplier]->(s:supplier)
 where c.C_REGION = "AMERICA" 
 and (p.P_MFGR = "MFGR#1" or p.P_MFGR = "MFGR#2")
@@ -127,7 +127,7 @@ ORDER BY d.D_YEAR, c.C_NATION;
 
 ##### Q4.2
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_part]->(p:part),(d:date)<-[:order_date]-(l)-[:order_supplier]->(s:supplier)
 where c.C_REGION starts with "AMERICA"
 and (d.D_YEAR = 1997 or d.D_YEAR = 1998)
@@ -139,7 +139,7 @@ ORDER BY d.D_YEAR, s.S_NATION, p.P_CATEGORY;
 
 ##### Q4.3
 
-```sql
+```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_part]->(p:part),(d:date)<-[:order_date]-(l)-[:order_supplier]->(s:supplier)
 where (d.D_YEAR = 1997 or d.D_YEAR = 1998)
 and c.C_REGION = "AMERICA"
