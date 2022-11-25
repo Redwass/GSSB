@@ -15,7 +15,7 @@ Here is a list of SSB queries using Cypher Language Request
 
 ##### Q1.1
 
-```sql
+```cypher
 optional match (d:date{D_YEAR:1993})<-[r:order_date]-(l:lineorder)
 where 1<= l.LO_DISCOUNT <=3
 and l.LO_QUANTITY < 25
