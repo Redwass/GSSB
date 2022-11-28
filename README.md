@@ -1,21 +1,20 @@
 # Graph Star Schema Benchmark (GSSB)
 The Star Schema Benchmark, or SSB, was designed to evaluate the performance of database systems for star schema data warehouse queries. The SSB schema is based on the [TPC-H benchmark] (http://www.tpc.org/tpch/), but in a modified form. The queries are also based on the TPC-H queries, but the number of queries is reduced to facilitate the execution of SSB on different platforms.
 
-## 3. Platform, data and installation. 
-To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The data to be downloaded from the link is in the CSV's files. The configuration and installation commands on Windows and Linux platforms are as follows:
-
-Test d'image
+Présenter GSSB
 
 ![Cover](https://github.com/Redwass/test/blob/main/figures/gssb.jpg)
 
-## To install
-c'est just un test
+## 3. Platform, data and installation. 
+
+To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The data to be downloaded from the link is in the CSV's files. The configuration and installation commands on Windows and Linux platforms are as follows:
+
+### Neo4j configuration
 
 ### For windows 
 ```cmd
 neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-header.csv,C:\gssb_data\lineorder.csv --nodes=part=C:\gssb_data\part-header.csv,C:\gssb_data\part.csv --relationships=order_part=C:\gssb_data\order_part-header.csv,C:\gssb_data\order_part.csv
 ```
-
 ### For Linux 
 ```cmd
 neo4j-admin import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-header.csv,C:\gssb_data\lineorder.csv --nodes=part=C:\gssb_data\part-header.csv,C:\gssb_data\part.csv --relationships=order_part=C:\gssb_data\order_part-header.csv,C:\gssb_data\order_part.csv
