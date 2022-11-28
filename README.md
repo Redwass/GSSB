@@ -7,7 +7,7 @@ We generated the same ssb schema using the graph approach called Graph Star Sche
 
 ## 3. Platform, data and installation. 
 
-To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The data to be downloaded from https://github.com/Redwass/GSSB/tree/main/gssb_data is in the CSV's files. The configuration and installation commands on Windows and Linux platforms are as follows:
+To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The data to be downloaded from [Download](https://github.com/Redwass/GSSB/tree/main/gssb_data) is in the CSV's files. The configuration and installation commands on Windows and Linux platforms are as follows:
 
 ### Neo4j configuration
 
