@@ -45,10 +45,14 @@ on the <<+Create database>> tab with the name gssb.
 ### 1.4 Create indexes
 This is not required, but you can create the following indexes to optimise query execution :
 
-create index index_part_category for (p:part) on (p.P_CATEGORY);\\
+create index index_part_category for (p:part) on (p.P_CATEGORY);
+
 create index index_part_brand for (p:part) on (p.P_BRAND1);
+
 create index idxex_customer_region for (c:customer) on (c.C_REGION);
+
 create index idxex_customer_nation for (c:customer) on (c.C_NATION);
+
 create index idxex_customer_city for (c:customer) on (c.C_CITY);
 
 ## 2. Queries
