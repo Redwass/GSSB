@@ -9,7 +9,7 @@ Test d'image
 ![Cover](https://github.com/Redwass/test/blob/main/figures/gssb.jpg)
 
 
-## 4. Query
+## 4. Queries
 
 Here is a list of SSB queries using Cypher Language Request
 
