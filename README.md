@@ -10,6 +10,13 @@ Test d'image
 
 ## To install
 c'est just un test
+
+### For windows 
+```cmd
+neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\neo4jdata\ssb_import\lineorder-header.csv,C:\neo4jdata\ssb_import\lineorder.csv --nodes=part=C:\neo4jdata\ssb_import\part-header.csv,C:\neo4jdata\ssb_import\part.csv --relationships=order_part=C:\neo4jdata\ssb_import\order_part-header.csv,C:\neo4jdata\ssb_import\order_part.csv
+```
+
+### For Linux 
 ```cmd
 neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\neo4jdata\ssb_import\lineorder-header.csv,C:\neo4jdata\ssb_import\lineorder.csv --nodes=part=C:\neo4jdata\ssb_import\part-header.csv,C:\neo4jdata\ssb_import\part.csv --relationships=order_part=C:\neo4jdata\ssb_import\order_part-header.csv,C:\neo4jdata\ssb_import\order_part.csv
 ```
