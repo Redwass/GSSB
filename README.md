@@ -2,7 +2,7 @@
 The Star Schema Benchmark, or SSB, was designed to evaluate the performance of database systems for star schema data warehouse queries. The SSB schema is based on the [TPC-H benchmark] (http://www.tpc.org/tpch/), but in a modified form. The queries are also based on the TPC-H queries, but the number of queries is reduced to facilitate the execution of SSB on different platforms.
 
 ## 3. Platform, data and installation. 
-Pour installer le GSSB, utiliser la base de données en graph Neo4j version 4.x.x ou plus récente. Les données à télécharger sur lien sont sous forme de fichier CSV's. La configuration et les commandes d'installation sur les plate-formes Windows et Linux sont comme suit :
+To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The data to be downloaded from the link is in the CSV's files. The configuration and installation commands on Windows and Linux platforms are as follows:
 
 Test d'image
 
