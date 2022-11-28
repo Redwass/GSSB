@@ -1,5 +1,5 @@
-# test
-1st project only for test
+# Graph Star Schema Benchmark
+The Star Schema Benchmark, or SSB, was designed to evaluate the performance of database systems for star schema data warehouse queries. The SSB schema is based on the [TPC-H benchmark] (http://www.tpc.org/tpch/), but in a modified form. The queries are also based on the TPC-H queries, but the number of queries is reduced to facilitate the execution of SSB on different platforms.
 
 ## To install
 c'est just un test
