@@ -6,7 +6,7 @@ c'est just un test
 
 Test d'image
 
-![Cover](https://github.com/Redwass/test/blob/main/figures/image.jpeg)
+![Cover](https://github.com/Redwass/test/blob/main/figures/gssb.jpg)
 
 
 ## 4. Query
