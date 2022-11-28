@@ -13,12 +13,12 @@ c'est just un test
 
 ### For windows 
 ```cmd
-neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\neo4jdata\ssb_import\lineorder-header.csv,C:\neo4jdata\ssb_import\lineorder.csv --nodes=part=C:\neo4jdata\ssb_import\part-header.csv,C:\neo4jdata\ssb_import\part.csv --relationships=order_part=C:\neo4jdata\ssb_import\order_part-header.csv,C:\neo4jdata\ssb_import\order_part.csv
+neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-header.csv,C:\gssb_data\lineorder.csv --nodes=part=C:\gssb_data\part-header.csv,C:\gssb_data\part.csv --relationships=order_part=C:\gssb_data\order_part-header.csv,C:\gssb_data\order_part.csv
 ```
 
 ### For Linux 
 ```cmd
-neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\neo4jdata\ssb_import\lineorder-header.csv,C:\neo4jdata\ssb_import\lineorder.csv --nodes=part=C:\neo4jdata\ssb_import\part-header.csv,C:\neo4jdata\ssb_import\part.csv --relationships=order_part=C:\neo4jdata\ssb_import\order_part-header.csv,C:\neo4jdata\ssb_import\order_part.csv
+neo4j-admin import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-header.csv,C:\gssb_data\lineorder.csv --nodes=part=C:\gssb_data\part-header.csv,C:\gssb_data\part.csv --relationships=order_part=C:\gssb_data\order_part-header.csv,C:\gssb_data\order_part.csv
 ```
 
 ## 4. Queries
