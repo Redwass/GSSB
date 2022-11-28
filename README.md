@@ -14,7 +14,9 @@ To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The d
 This configuration is for 16,0 Go of RAM
 #### Java Heap Size: 
 dbms.memory.heap.initial_size=4100m
+
 dbms.memory.heap.max_size=4100m
+
 dbms.memory.pagecache.size=11940m
 
 ### For windows 
