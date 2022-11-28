@@ -11,6 +11,12 @@ To install the GSSB, use the graph database Neo4j version 4.x.x or higher. The d
 
 ### Neo4j configuration
 
+This configuration is for 16,0 Go of RAM
+#### Java Heap Size: 
+dbms.memory.heap.initial_size=4100m
+dbms.memory.heap.max_size=4100m
+dbms.memory.pagecache.size=11940m
+
 ### For windows 
 ```cmd
 neo4j-admin.bat import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-header.csv,C:\gssb_data\lineorder.csv --nodes=part=C:\gssb_data\part-header.csv,C:\gssb_data\part.csv --relationships=order_part=C:\gssb_data\order_part-header.csv,C:\gssb_data\order_part.csv
