@@ -32,11 +32,17 @@ neo4j-admin import --database=gssb --nodes=lineorder=C:\gssb_data\lineorder-head
 ```
 
 ### Create database
-After the database is set up using the neo4j-admin command, it must be created manually on the command line/or on neo4j desktop on the <<+Create database>> tab with the name gssb.
+After the database is set up using the neo4j-admin command, it must be created manually on :
+
+#### Command line
+CREATE DATABASE gssb (on system database)
+
+#### Neo4j desktop 
+on the <<+Create database>> tab with the name gssb.
 
 ## 4. Queries
 
-Here is a list of SSB queries using Cypher Language Request
+Here is a list of SSB queries using Cypher Language Request. They can be applied on Cypher-shell or in Neo4j Browser.
 
 ##### Q1.1
 
