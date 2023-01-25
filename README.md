@@ -121,8 +121,8 @@ ORDER BY d.D_YEAR, p.P_BRAND;
 ```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where 1992<= d.D_YEAR <=1997
-and c.C_REGION starts with "ASIA"
-and s.S_REGION starts with "ASIA" 
+and c.C_REGION = "ASIA"
+and s.S_REGION = "ASIA" 
 return c.C_NATION, s.S_NATION, d.D_YEAR, sum(l.LO_REVENUE) as revenu
 ORDER BY d.D_YEAR ASC, revenu DESC;
 ```
@@ -132,8 +132,8 @@ ORDER BY d.D_YEAR ASC, revenu DESC;
 ```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_date]->(d:date),(s:supplier)<-[:order_supplier]-(l)
 where 1992<= d.D_YEAR <=1997
-and c.C_NATION starts with "UNITED STATES" 
-and s.S_NATION starts with "UNITED STATES" 
+and c.C_NATION = "UNITED STATES" 
+and s.S_NATION = "UNITED STATES" 
 return c.C_CITY, s.S_CITY, d.D_YEAR, sum(l.LO_REVENUE) as revenu
 ORDER BY d.D_YEAR ASC, revenu DESC;
 ```
@@ -175,7 +175,7 @@ ORDER BY d.D_YEAR, c.C_NATION;
 
 ```cypher
 optional match (c:customer)<-[:order_customer]-(l:lineorder)-[:order_part]->(p:part),(d:date)<-[:order_date]-(l)-[:order_supplier]->(s:supplier)
-where c.C_REGION starts with "AMERICA"
+where c.C_REGION = "AMERICA"
 and (d.D_YEAR = 1997 or d.D_YEAR = 1998)
 and (p.P_MFGR = "MFGR#1" or p.P_MFGR = "MFGR#2")
 and s.S_REGION = "AMERICA"
